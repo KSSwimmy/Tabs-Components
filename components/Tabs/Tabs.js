@@ -2,7 +2,7 @@
 class TabLink {
   constructor(element) {
     // Assign this.element to the passed in DOM element
-    // this.element;
+    // this.element ;
     
     // Get the custom data attribute on the Link
     // this.data;
@@ -58,5 +58,8 @@ class TabItem {
 - In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
 
 */
-
-links = document.querySelectorAll();
+// Step 1: Get all the elements from the DOM into a Nodelist
+links = document.querySelectorAll('.tabs-link');
+links.forEach(function(link) {
+return new TabLink(link);
+});
